@@ -1,5 +1,6 @@
 package com.reclameaqui.api.documents;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,9 +9,13 @@ public class Complain {
 
 		@Id
 		private String id;
+		@NotEmpty(message = "Title can't be empty")
 		private String title;
+		@NotEmpty(message = "Description can't be empty")
 		private String description;
+		@NotEmpty(message = "Locale can't be empty")
 		private String locale;
+		@NotEmpty(message = "Company can't be empty")
 		private String company;
 		
 		public Complain() {
@@ -25,6 +30,7 @@ public class Complain {
 			id = id;
 		}
 
+
 		public String getTitle() {
 			return title;
 		}
@@ -32,6 +38,7 @@ public class Complain {
 		public void setTitle(String title) {
 			title = title;
 		}
+		
 
 		public String getDescription() {
 			return description;
@@ -41,6 +48,7 @@ public class Complain {
 			description = description;
 		}
 
+
 		public String getLocale() {
 			return locale;
 		}
@@ -48,6 +56,7 @@ public class Complain {
 		public void setLocale(String locale) {
 			locale = locale;
 		}
+
 
 		public String getCompany() {
 			return company;
