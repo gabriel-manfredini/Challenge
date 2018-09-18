@@ -7,53 +7,53 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Complain {
 
 		@Id
-		private String Id;
-		private String Title;
-		private String Description;
-		private String Locale;
-		private String Company;
+		private String id;
+		private String title;
+		private String description;
+		private String locale;
+		private String company;
 		
 		public Complain() {
 			
 		}
 
 		public String getId() {
-			return Id;
+			return id;
 		}
 
 		public void setId(String id) {
-			Id = id;
+			id = id;
 		}
 
 		public String getTitle() {
-			return Title;
+			return title;
 		}
 
 		public void setTitle(String title) {
-			Title = title;
+			title = title;
 		}
 
 		public String getDescription() {
-			return Description;
+			return description;
 		}
 
 		public void setDescription(String description) {
-			Description = description;
+			description = description;
 		}
 
 		public String getLocale() {
-			return Locale;
+			return locale;
 		}
 
 		public void setLocale(String locale) {
-			Locale = locale;
+			locale = locale;
 		}
 
 		public String getCompany() {
-			return Company;
+			return company;
 		}
 
 		public void setCompany(String company) {
-			Company = company;
+			company = company;
 		}
 }
