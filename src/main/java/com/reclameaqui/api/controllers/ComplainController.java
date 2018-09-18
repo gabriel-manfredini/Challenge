@@ -54,14 +54,14 @@ public class ComplainController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Response<Complain>> ingest(@Valid @RequestBody Complain complain, BindingResult result){
-		if(result.hasErrors()) {
-			List<String> errors = new ArrayList<String>();
-			result.getAllErrors().forEach(error -> errors.add(error.getDefaultMessage()));
-			return ResponseEntity.badRequest().body(new Response<Complain>(errors));
+	public ResponseEntity<Response<Complain>> create(@Valid @RequestBody Complain complain, BindingResult result) {
+		if (result.hasErrors()) {
+			List<String> erros = new ArrayList<String>();
+			result.getAllErrors().forEach(erro -> erros.add(erro.getDefaultMessage()));
+			return ResponseEntity.badRequest().body(new Response<Complain>(erros));
 		}
-		return ResponseEntity.ok(new Response<Complain>(this.complainService.ingest(complain)));
 		
+		return ResponseEntity.ok(new Response<Complain>(this.complainService.ingest(complain)));
 	}
 	
 	@PutMapping(path = "/{id}")
