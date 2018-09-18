@@ -9,13 +9,9 @@ public class Complain {
 
 		@Id
 		private String id;
-		@NotEmpty(message = "Title can't be empty")
 		private String title;
-		@NotEmpty(message = "Description can't be empty")
 		private String description;
-		@NotEmpty(message = "Locale can't be empty")
 		private String locale;
-		@NotEmpty(message = "Company can't be empty")
 		private String company;
 		
 		public Complain() {
@@ -27,42 +23,42 @@ public class Complain {
 		}
 
 		public void setId(String id) {
-			id = id;
+			this.id = id;
 		}
 
-
+		@NotEmpty(message = "Title can't be empty")
 		public String getTitle() {
 			return title;
 		}
 
 		public void setTitle(String title) {
-			title = title;
+			this.title = title;
 		}
 		
-
+		@NotEmpty(message = "Description can't be empty")
 		public String getDescription() {
 			return description;
 		}
 
 		public void setDescription(String description) {
-			description = description;
+			this.description = description;
 		}
 
-
+		@NotEmpty(message = "Locale can't be empty")
 		public String getLocale() {
 			return locale;
 		}
 
 		public void setLocale(String locale) {
-			locale = locale;
+			this.locale = locale;
 		}
 
-
+		@NotEmpty(message = "Company can't be empty")
 		public String getCompany() {
 			return company;
 		}
 
 		public void setCompany(String company) {
-			company = company;
+			this.company = company;
 		}
 }
