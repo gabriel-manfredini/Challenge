@@ -38,17 +38,17 @@ public class ComplainController {
 		return ResponseEntity.ok(new Response<Complain>(this.complainService.listById(id)));
 	}
 	
-	@GetMapping(path = "/{locale}/{company}")
+	@GetMapping(path = "/loc&cp/{locale}&{company}")
 	public ResponseEntity<Response<List<Complain>>> listByLocaleAndCompany(@PathVariable(name = "locale") String locale, @PathVariable(name = "company") String company){
 		return ResponseEntity.ok(new Response<List<Complain>>(this.complainService.listByLocaleAndCompany(locale, company)));
 	}
 	
-	@GetMapping(path = "/{locale}")
+	@GetMapping(path = "/loc/{locale}")
 	public ResponseEntity<Response<List<Complain>>> listByLocale(@PathVariable(name = "locale") String locale){
 		return ResponseEntity.ok(new Response<List<Complain>>(this.complainService.listByLocale(locale)));
 	}
 	
-	@GetMapping(path = "/{company}")
+	@GetMapping(path = "/cp/{company}")
 	public ResponseEntity<Response<List<Complain>>> listByCompany(@PathVariable(name = "company") String company){
 		return ResponseEntity.ok(new Response<List<Complain>>(this.complainService.listByCompany(company)));
 	}

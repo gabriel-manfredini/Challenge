@@ -32,31 +32,20 @@ public class ComplainServiceImpl implements ComplainService {
 
 	@Override
 	public List<Complain> listByLocaleAndCompany(String locale, String company) {
-//		Complain complain = new Complain();
-//		complain.setLocale(locale);
-//		complain.setCompany(company);
-//		
-//		this.complainRepository.
-//		MongoTemplate mongoTemplate = new MongoTemplate();
-//		
-//		return List<User> users = MongoTemplate.find(query, Complain.class);
-		return null;
+
+		return complainRepository.findByLocaleAndCompany(locale,company);
 	}
 
 	@Override
 	public List<Complain> listByLocale(String locale) {
-//		Query query = new Query();
-//		query.addCriteria(Criteria.where("locale").is(locale));	
-//		return complainRepository.findAll(query,Complain.class);
-		return null;
+		
+		return complainRepository.findByLocale(locale);
 	}
 
 	@Override
 	public List<Complain> listByCompany(String company) {
-//		Query query = new Query();
-//		query.addCriteria(Criteria.where("company").is(company));	
-//		return MongoTemplate.find(query,Complain.class);
-		return null;
+		
+		return complainRepository.findByCompany(company);
 	}
 
 	@Override
